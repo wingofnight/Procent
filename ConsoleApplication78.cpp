@@ -1,6 +1,3 @@
-// ConsoleApplication78.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include "pch.h"
 #include <iostream>
 #include <vector>
@@ -18,13 +15,13 @@ public:
 };
 double contribution :: s_procetn = 1;
 
-class contributor : public contribution {
+class contributor {
 public:
 	string name;
 	vector <contribution> cont;
 	void addCont(contribution Cont) {
 		cont.push_back(Cont);
-		s_procetn++;
+		cont[0].s_procetn++;
 	}
 };
 int main()
@@ -37,7 +34,7 @@ int main()
 	Vasya.addCont(pivo);
 	Vasya.addCont(gus);
 	Vasya.addCont(just_money_about_which_the_wife_does_not_know);
-	cout << Vasya.s_procetn;
-	Vasya.s_procetn = 3;
-	cout <<endl<< Vasya.s_procetn;
+	cout << Vasya.cont[1].s_procetn;
+	
+	
 }
